@@ -11,7 +11,7 @@ let notifications = {};
 const bot = new Telegraf(TOKEN);
 bot.start(ctx =>
   ctx.reply(
-    `Привет, ${ctx.message.from.first_name}! Я телеграм бот, который отображает информацию об коронавирусе. Что бы узнать список моих комманд, напиши /help`
+    `Привет, ${ctx.message.from.first_name}! Я - телеграм бот, который отображает информацию о коронавирусе. Что бы узнать список моих комманд, напиши /help`
   )
 );
 bot.help(ctx =>
