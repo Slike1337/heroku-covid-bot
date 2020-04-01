@@ -64,7 +64,7 @@ bot.command("notification", async ctx => {
       notifications[ctx.message.from.id].push(country);
     }
     ctx.reply("Уведомления включены!");
-  } catch (e) {
+  } catch (err) {
     ctx.reply("Такой страны нет!");
   }
 });
