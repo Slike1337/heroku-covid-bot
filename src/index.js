@@ -72,6 +72,7 @@ bot.command("notif", async ctx => {
 });
 bot.command("unnotif", ctx => {
     delete notifications[ctx.message.from.id];
+    ctx.reply("Уведомления выключены.");
 });
 setInterval(() => {
     for (let [key, value] of Object.entries(notifications)) {
