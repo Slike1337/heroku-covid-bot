@@ -20,10 +20,10 @@ bot.start(ctx =>
 bot.help(ctx =>
   ctx.reply(
     "Мои комманды:\n" +
-      "/country {Название страны} - Узнать информацию о вашей стране. Примечание: название страны должно быть на английском!\n" +
-      "/world - Узнать информацию об коронавирусе на всей планете.\n" +
-      "/notif {Название страны} - Включить уведомления о стране каждые 24 часа. Примечание: название страны должно быть на английском!\n" +
-      "/unnotif - Выключить уведомления."
+    "/country {Название страны} - Узнать информацию о вашей стране. Примечание: название страны должно быть на английском!\n" +
+    "/world - Узнать информацию об коронавирусе на всей планете.\n" +
+    "/notif {Название страны} - Включить уведомления о стране каждые 24 часа. Примечание: название страны должно быть на английском!\n" +
+    "/unnotif - Выключить уведомления."
   )
 );
 bot.command("country", ctx => {
@@ -37,19 +37,19 @@ bot.command("country", ctx => {
       .then(data => {
         ctx.reply(
           "\u0421\u0442\u0440\u0430\u043D\u0430: "
-            .concat(
-              data.country,
-              "\n\u0418\u043D\u0444\u0438\u0446\u0438\u0440\u043E\u0432\u0430\u043D\u043D\u044B\u0445: "
-            )
-            .concat(
-              data.cases,
-              "\n\u0412\u044B\u0437\u0434\u043E\u0440\u043E\u0432\u0435\u0432\u0448\u0438\u0445: "
-            )
-            .concat(
-              data.recovered,
-              "\n\u0421\u043C\u0435\u0440\u0442\u0435\u0439: "
-            )
-            .concat(data.deaths)
+          .concat(
+            data.country,
+            "\n\u0418\u043D\u0444\u0438\u0446\u0438\u0440\u043E\u0432\u0430\u043D\u043D\u044B\u0445: "
+          )
+          .concat(
+            data.cases,
+            "\n\u0412\u044B\u0437\u0434\u043E\u0440\u043E\u0432\u0435\u0432\u0448\u0438\u0445: "
+          )
+          .concat(
+            data.recovered,
+            "\n\u0421\u043C\u0435\u0440\u0442\u0435\u0439: "
+          )
+          .concat(data.deaths)
         );
       })
       .catch(err => {
@@ -65,15 +65,15 @@ bot.command("world", ctx => {
     .then(data => {
       ctx.reply(
         "\u0412\u0441\u0435\u0433\u043E \u0438\u043D\u0444\u0438\u0446\u0438\u0440\u043E\u0432\u0430\u043D\u043D\u044B\u0445: "
-          .concat(
-            data.cases,
-            "\n\u0412\u0441\u0435\u0433\u043E \u0432\u044B\u0437\u0434\u043E\u0440\u043E\u0432\u0435\u0432\u0448\u0438\u0445: "
-          )
-          .concat(
-            data.recovered,
-            "\n\u0412\u0441\u0435\u0433\u043E \u0441\u043C\u0435\u0440\u0442\u0435\u0439: "
-          )
-          .concat(data.deaths)
+        .concat(
+          data.cases,
+          "\n\u0412\u0441\u0435\u0433\u043E \u0432\u044B\u0437\u0434\u043E\u0440\u043E\u0432\u0435\u0432\u0448\u0438\u0445: "
+        )
+        .concat(
+          data.recovered,
+          "\n\u0412\u0441\u0435\u0433\u043E \u0441\u043C\u0435\u0440\u0442\u0435\u0439: "
+        )
+        .concat(data.deaths)
       );
     })
     .catch(err => {});
@@ -114,19 +114,19 @@ setInterval(() => {
           bot.telegram.sendMessage(
             key,
             "\u0421\u0442\u0440\u0430\u043D\u0430: "
-              .concat(
-                data.country,
-                "\n\u0418\u043D\u0444\u0438\u0446\u0438\u0440\u043E\u0432\u0430\u043D\u043D\u044B\u0445: "
-              )
-              .concat(
-                data.cases,
-                "\n\u0412\u044B\u0437\u0434\u043E\u0440\u043E\u0432\u0435\u0432\u0448\u0438\u0445: "
-              )
-              .concat(
-                data.recovered,
-                "\n\u0421\u043C\u0435\u0440\u0442\u0435\u0439: "
-              )
-              .concat(data.deaths)
+            .concat(
+              data.country,
+              "\n\u0418\u043D\u0444\u0438\u0446\u0438\u0440\u043E\u0432\u0430\u043D\u043D\u044B\u0445: "
+            )
+            .concat(
+              data.cases,
+              "\n\u0412\u044B\u0437\u0434\u043E\u0440\u043E\u0432\u0435\u0432\u0448\u0438\u0445: "
+            )
+            .concat(
+              data.recovered,
+              "\n\u0421\u043C\u0435\u0440\u0442\u0435\u0439: "
+            )
+            .concat(data.deaths)
           );
         })
         .catch(err => {});
